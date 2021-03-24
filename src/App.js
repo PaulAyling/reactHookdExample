@@ -1,12 +1,22 @@
 import React from 'react';
-import './App.css';
+import { useTheme, useThemeUpdate } from './ThemeContext';
 
 function App() {
+  const darkTheme = useTheme()
+  const toggleTheme = useThemeUpdate()
+  const themeStyles = {
+    backgroundColor: darkTheme ? '#333' : '#ccc',
+    color: darkTheme ? '#CCC' : '#333',
+    padding: '2rem',
+    margin: '2rem',
+  };
   return (
-    <div className="App">
-      
-    </div>
+    <>
+      <button onClick={toggleTheme}>Toggle Theme</button>
+      <div style={themeStyles}>Function theme</div>
+    </>
   );
 }
+
 
 export default App;
