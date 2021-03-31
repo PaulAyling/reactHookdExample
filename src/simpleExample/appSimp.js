@@ -1,21 +1,18 @@
-import React  from 'react';
-import SimpleContextProvider from './simpleContext'
-import Booklist from './Booklist'
-
-
-
+import React from 'react';
+import BookContextProvider from './BookContext';
+import Booklist from './Booklist';
+import ThemeContextProvider from './ThemeContext';
+import ThemeToggle from './ThemeToggle';
 
 function AppSimp() {
-   
-  
   return (
-    <SimpleContextProvider>
-      <Booklist/>
-    </SimpleContextProvider>
-
-
+    <ThemeContextProvider>
+      <BookContextProvider>
+        <Booklist />
+        <ThemeToggle />
+      </BookContextProvider>
+    </ThemeContextProvider>
   );
 }
-
 
 export default AppSimp;

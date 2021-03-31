@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
-import { SimpleContext } from './simpleContext';
+import { BookContext } from './BookContext';
 
 export default function Booklist(props) {
-  const { books } = useContext(SimpleContext);
+  const { books } = useContext(BookContext);
 
   return (
     <div>
