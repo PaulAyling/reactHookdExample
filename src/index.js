@@ -1,5 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import AppHook from './tutorial_customHook/app_hook';
+import AppHook from './simpleExample/appSimp';
 
 ReactDOM.render(<AppHook />, document.getElementById('root'));
